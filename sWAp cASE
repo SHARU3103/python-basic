@@ -1,0 +1,27 @@
+def swap_case(s):
+    
+    ns = ""
+    c1 = 0
+    c2 = 0
+    c3 = 0
+   
+    
+    for i in s:
+        
+        if (i.isupper()) == True:
+            c1 += 1
+            ns += (i.lower())
+            
+        elif (i.islower()) == True:
+            c2 += 1
+            ns += (i.upper())
+            
+        elif (i.isalpha()) == False:
+            c3 += 1
+            ns += i
+                
+    return ns
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
